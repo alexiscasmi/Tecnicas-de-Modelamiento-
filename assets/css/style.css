@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Righteous&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* =======================
+   ESTILOS GENERALES
+======================= */
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: rgb(224, 233, 233);
+    margin: 0;
+    padding: 0;
+}
+
+/* =======================
+   ENCABEZADO Y NAVEGACIÓN
+======================= */
+.app-header {
+    margin: 0;
+    background-color: blue;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.navigation {
+    background-color: blue;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.nav-link {
+    background-color: chartreuse;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: yellow;
+    transform: scale(1.05);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* =======================
+   PÁGINA 1 (texto izquierda / gráfica derecha)
+======================= */
+.page-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 20px;
+    flex-wrap: nowrap;
+}
+
+.content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.content.left {
+    flex: 1 1 50%;
+}
+
+.content.right {
+    flex: 1 1 50%;
+}
+
+.title {
+    text-align: center;
+    margin-top: 0;
+}
+
+/* =======================
+   SECCIÓN SOBRE MÍ (INICIO)
+======================= */
+.contenedor-inicio {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.columna.izquierda {
+    width: 45%;
+    background-color: #f8fafc;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.columna.derecha {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-hobbies {
+    width: 90%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
+}
+
+/* --- Título y texto de la sección --- */
+.titulo-sobremi {
+    font-family: 'Outfit', sans-serif;
+    color: #07f407;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.texto-sobremi {
+    font-family: 'Outfit', sans-serif;
+    color: #334155;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* =======================
+   NUEVA SECCIÓN - PÁGINA 2
+   (Texto izquierda / Gráfica derecha)
+======================= */
+.page2-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin: 40px 20px;
+}
+
+.page2-text {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    text-align: justify;
+}
+
+.page2-graph {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+/* =======================
+   RESPONSIVE DESIGN
+======================= */
+@media (max-width: 900px) {
+    /* Página 1 */
+    .page-container {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .content.left, 
+    .content.right {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    /* Inicio */
+    .contenedor-inicio {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .columna.izquierda, 
+    .columna.derecha {
+        width: 100%;
+    }
+
+    .columna.izquierda {
+        padding: 25px;
+    }
+
+    .imagen-hobbies {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .texto-sobremi {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /* Página 2 */
+    .page2-container {
+        flex-direction: column;
+    }
+
+    .page2-text, .page2-graph {
+        width: 100%;
+    }
+}
+
+
+
+
+/* ============================
+   ESTILOS PÁGINA 3
+   ============================ */
+
+#pagina3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 35px;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* ----- SECCIÓN IZQUIERDA ----- */
+#pagina3 .p3-left {
+  flex: 1;
+  min-width: 360px;
+  max-width: 480px;
+}
+
+/* ----- TARJETA DE PARÁMETROS ----- */
+#pagina3 .p3-card {
+  background: #f4f8ff;
+  border-radius: 18px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+#pagina3 .p3-card:hover {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+/* ----- CAMPOS DE PARÁMETROS ----- */
+#pagina3 .p3-item {
+  display: flex;
+  flex-direction: column;
+}
+
+#pagina3 .p3-label {
+  font-weight: 600;
+  color: #1e1e1e;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+#pagina3 .p3-input {
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.25s;
+}
+
+#pagina3 .p3-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+}
+
+/* ----- BOTÓN ----- */
+#pagina3 .p3-btn {
+  background: linear-gradient(90deg, #007bff, #00b4d8);
+  color: white;
+  font-weight: 600;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+#pagina3 .p3-btn:hover {
+  background: linear-gradient(90deg, #0056b3, #0096c7);
+  transform: scale(1.05);
+}
+
+/* ----- TÍTULOS ----- */
+#pagina3 .p3-title {
+  font-size: 23px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+/* ----- SECCIÓN DERECHA (GRÁFICA) ----- */
+#pagina3 .p3-right {
+  flex: 2;
+  min-width: 400px;
+}
+
+
+
+/* ============================
+   ESTILOS PÁGINA 4
+   ============================ */
+
+#pagina4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 35px;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* ----- SECCIÓN IZQUIERDA (GRÁFICA) ----- */
+#pagina4 .p4-left {
+  flex: 2;
+  min-width: 400px;
+}
+
+/* ----- SECCIÓN DERECHA (PARÁMETROS) ----- */
+#pagina4 .p4-right {
+  flex: 1;
+  min-width: 360px;
+  max-width: 480px;
+}
+
+/* ----- TARJETA DE PARÁMETROS ----- */
+#pagina4 .p4-card {
+  background: #f9fcff;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+#pagina4 .p4-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transform: translateY(-3px);
+}
+
+/* ----- CAMPOS ----- */
+#pagina4 .p4-item {
+  display: flex;
+  flex-direction: column;
+}
+
+#pagina4 .p4-label {
+  font-weight: 600;
+  color: #1f1f1f;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+#pagina4 .p4-input {
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.25s;
+}
+
+#pagina4 .p4-input:focus {
+  border-color: #00aaff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 170, 255, 0.4);
+}
+
+/* ----- BOTÓN ----- */
+#pagina4 .p4-btn {
+  background: linear-gradient(90deg, #00aaff, #0096c7);
+  color: white;
+  font-weight: 600;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+#pagina4 .p4-btn:hover {
+  background: linear-gradient(90deg, #0077b6, #00b4d8);
+  transform: scale(1.05);
+}
+
+/* ----- TÍTULOS ----- */
+#pagina4 .p4-title {
+  font-size: 23px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 20px;
+}
